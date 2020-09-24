@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity_LifeCycle</string>
+    <string name="hello_world">Activity Life Cycle !!</string>
+    <string name="action_settings">Settings</string>
+    <string name="prog_name">Activity Life Cycle !!</string>
+
+</resources>
