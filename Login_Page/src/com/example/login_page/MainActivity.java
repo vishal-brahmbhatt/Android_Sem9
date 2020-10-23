@@ -1,8 +1,10 @@
 package com.example.login_page;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,15 +29,26 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub				
+				// TODO Auto-generated method stub	
+				String c = uname.getText().toString();
+				String cc = password.getText().toString();
+				Log.d("uname", c);
+				Log.d("uname", cc);
 				if(TextUtils.isEmpty(uname.getText()))
 				{
 					Toast.makeText(getApplicationContext(), "UserName is mandatory", Toast.LENGTH_SHORT).show();
 				}
-				if(TextUtils.isEmpty(password.getText()))
+				else if(TextUtils.isEmpty(password.getText()))
 				{
 					Toast.makeText(getApplicationContext(), "Password is mandatory", Toast.LENGTH_SHORT).show();
 				}
+				if(c.equals("admin") && cc.equals("abcd"))
+					{
+						Log.d("vishal", "vishal");
+						Intent intent = new Intent(MainActivity.this,HomeScreen.class);
+						intent.putExtra("uname1", uname.getText().toString());
+						startActivity(intent);
+					}				
 				
 			}
 		});
